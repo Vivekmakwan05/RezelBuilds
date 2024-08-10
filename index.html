@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rezel Builds </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="logo">R <span style="color:#00ced1;">Builds..</span></a>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#home">home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#template">Template</a></li>
+                <li><a href="#step">Steps</a></li>
+                <li><a><button class="btn" id="btnn">Sign-Up</button></a></li>
+                <li><a><button class="btn" id="btnn2">Login</button></a></li>
+            </ul>
+        </nav>
+        <div class="fas fa-bars"></div>
+    </header>
+
+    <form class="popup" id="main">
+        <div class="popup-content">
+            <img src="clso.png" class="close">
+            <img src="user.png" class="user">
+            <input type="text" id="email" name="email" placeholder="Enter Email">
+            <input type="password" id="password" name="password" placeholder="Enter Password"><br>
+            <button type="button" class="btn" id="signup" name="signup">Sign-Up</button>
+        </div>
+    </form>
+    <form class="popup2" id="main">
+        <div class="popup-content">
+            <img src="clso.png" alt="" class="close2">
+            <img src="user.png" class="user">
+            <input type="text" name="log_email" id="log_email" placeholder="Enter Email">
+            <input type="password" name="log_password" id="log_password" placeholder="Enter Password"><br>
+            <button type="button" class="btn" id="login" name="login">login</button>
+        </div>
+    </form>
+
+    <section class="home" id="home">
+        <div class="content">
+
+            <h1>Rezel Builds..</h1>
+            <p>Build A Fast And Easy Resume</p>
+            <a href="#"><button onclick="alertforLogin()" class="btn">Create Resume</button></a>
+
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <h1 class="heading">About <span style="color:#00ced1;">Us</span></h1>
+        <div class="row">
+
+            <div class="image">
+                <img src="images/about.png" alt="">
+            </div>
+
+            <div class="content">
+                <h3 style="color: #1e2532; text-align: center; font-weight: 400;">Rezel Builds..</h3>
+                <h3 style="text-align: center; font-weight: 400;">Build A Easy And Fast Resume</h3>
+                <p style="text-align: justify;">The Rezel Build We Want To Provide A Professional Resume Building Service. Our Tool Is Based On A
+                    Friendly User Interface, Allowing Users To Create A Well-Written Resume In A Few Steps.</p>
+                <a href="#"><button class="btn">learn more</button></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="templates" id="template">
+
+        <h1 class="heading">Resume <span style="color:#00ced1;">Templates</span></h1>
+
+
+        <div class="box-container">
+
+            <div class="box">
+                <img src="images/template1.png" alt="">
+                <h3>Template : 1</h3>
+            </div>
+
+            <div class="box">
+                <img src="images/template2.png" alt="">
+                <h3>Template : 2</h3>
+            </div>
+
+            <div class="box">
+                <img src="images/template3.png" alt="">
+                <h3>Template : 3</h3>
+            </div>
+
+            <div class="box">
+                <img src="images/template4.png" alt="">
+                <h3>Template : 4</h3>
+            </div>
+
+            <div class="box">
+                <img src="images/template5.png" alt="">
+                <h3>Template : 5</h3>
+            </div>
+
+            <div class="box">
+                <img src="images/template6.png" alt="">
+                <h3>Template : 6</h3>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="steps" id="step">
+
+        <h1 class="heading">Follows Step <span style="color:#00ced1;">To Create </span>Resume</h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <img src="images/step1.png" alt="">
+                <h3>Step : 1</h3>
+                <p>Fill The About Section</p>
+            </div>
+
+            <div class="box">
+                <img src="images/step2.png" alt="">
+                <h3>Step : 2</h3>
+                <p>Fill The Skill And Achivment Section</p>
+            </div>
+
+            <div class="box">
+                <img src="images/step3.png" alt="">
+                <h3>Step : 3</h3>
+                <p>Fill The Education Section</p>
+            </div>
+
+            <div class="box">
+                <img src="images/step4.png" alt="">
+                <h3>Step : 4</h3>
+                <p>Fill The Experiance Section</p>
+            </div>
+
+            <div class="box">
+                <img src="images/step5.png" alt="">
+                <h3>Step : 5</h3>
+                <p>Preview Resume</p>
+            </div>
+
+            <div class="box">
+                <img src="images/step6.png" alt="">
+                <h3>Step : 6</h3>
+                <p>Download CV</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="footer">
+        <h1 class="credit">Develop by <span>@ Rezel Builds..</span> | all rights reserved. </h1>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="main.js"></script>
+    <script src="form.js"></script>
+
+    <script type="module">
+
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-analytics.js";
+        import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-auth.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyCxuDxtcos6h1D4vERNbYwA6WUEmoDxpKI",
+            authDomain: "rezelbuild.firebaseapp.com",
+            projectId: "rezelbuild",
+            storageBucket: "rezelbuild.appspot.com",
+            messagingSenderId: "237255490385",
+            appId: "1:237255490385:web:fd1644f5610c7687fb3170",
+            measurementId: "G-S9PC5N4CBK"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        const auth = getAuth();
+        console.log(app);
+ 
+        document.getElementById("signup").addEventListener("click", function () {
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+    
+            createUserWithEmailAndPassword(auth, email, password)
+                .then((userCredential) => {
+                    const user = userCredential.user;
+                    console.log(user);
+                    alert("Registration successfully!!");
+                })
+                .catch((error) => {
+                    const errorCode = error.code;
+                    const errorMessage = error.message;
+                    // ..
+                    console.log(errorMessage);
+                    alert(error);
+                });
+        });
+  
+        document.getElementById("login").addEventListener("click", function () {
+            var email = document.getElementById("log_email").value;
+            var password = document.getElementById("log_password").value;
+
+            signInWithEmailAndPassword(auth, email, password)
+                .then((userCredential) => {
+                    const user = userCredential.user;
+                    console.log(user);
+                    alert(user.email + " Login successfully!!!");
+                    window.location = "login.html";
+                })
+                .catch((error) => {
+                    const errorCode = error.code;
+                    const errorMessage = error.message;
+                    console.log(errorMessage);
+                    alert(errorMessage);
+                });
+        });
+  
+        document.getElementById("logout").addEventListener("click", function () {
+            signOut(auth).then(() => {
+                console.log('Sign-out successful.');
+                alert('Sign-out successful.');
+                document.getElementById('logout').style.display = 'none';
+            }).catch((error) => {
+                console.log('An error happened.');
+            });
+        });
+
+    </script>
+
+    <script>
+        function alertforLogin() {
+            alert("Please First Sign-UP/Login");
+        }
+        var typed = new Typed(".input", {
+        strings: ["Easy And Fast Resume", "Proffessional Resume", "With The Help Of Resume"],
+        typedSpeed: 70,
+        backSpeed: 55,
+        loop: true
+    });
+    </script>
+
+</body>
+
+</html>

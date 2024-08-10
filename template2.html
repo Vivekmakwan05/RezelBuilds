@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template 2</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="template6.css">
+    <link rel="stylesheet" href="template2.css">
+</head>
+<body>
+    <header>
+    <nav class="navbar bg-white">
+        <div class="containerr">
+            <div class="navbar-content">
+                <div class="brand-and-toggler">
+                    <a href="template2.html" class="navbar-brand">
+                        <span class="navbar-brand-text">R <span>Builds..</span>
+                    </a>
+                    <a href="templates.html" class="btnn">Back</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    </header>
+
+    <section>
+        <div class="about-cont">
+            <h3>About Section</h3>
+            <div class="container">
+                <form id="resume-form">
+                    <div class="form-group-about">
+                        <label for="name">First Name</label>
+                        <input type="text" id="Firstname" name="Firstname" onkeyup="BuildResume()" placeholder="e.g. Abc">
+                        <label for="name">Middle Name ( Optional )</label>
+                        <input type="text" id="Middlename" name="Middlename" onkeyup="BuildResume()" placeholder="e.g. Pqr">
+                        <label for="name">Last Name</label>
+                        <input type="text" id="Lastname" name="Lastname" onkeyup="BuildResume()" placeholder="e.g. Xyz">
+                        <label for="Image">Your Image:</label>
+                        <input type="file" id="Image" name="Image" accept="image/*"><br><br>
+                        <label for="name">Bio (Title)</label>
+                        <input type="text" id="Bio" name="Bio" onkeyup="BuildResume()" placeholder="e.g. Student">
+                        <label for="name">Address</label>
+                        <input type="text" id="Addr" name="Addr" onkeyup="BuildResume()" placeholder="e.g. Xyz-123">
+                        <label for="name">Email</label>
+                        <input type="email" id="email" name="email" onkeyup="BuildResume()" placeholder="e.g. abc@gmail.com">
+                        <label for="name">Phone No</label>
+                        <input type="tel" id="phone" name="phone" onkeyup="BuildResume()" placeholder="e.g. 456-768-798, 567.654.002">
+                        <label for="name">Summary</label>
+                        <input type="text" id="Sumry" name="Sumry" onkeyup="BuildResume()" placeholder="e.g. abcd">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="skill-cont">
+            <h3>Skills</h3>
+            <div class="Ncontainer repeater">
+                <div class="repeater" data-repeater-list="group-a">
+                    <div data-repeater-item>
+                        <div class="container">
+                            <form id="resume-form">
+                                <div class="form-group-about">
+                                    <label for="name">Skill</label>
+                                    <input type="text" id="Skill1" name="Skill1" onkeyup="BuildResume()" placeholder="e.g. abcd">
+                                    <input type="text" id="Skill2" name="Skill2" onkeyup="BuildResume()" placeholder="e.g. abcd">
+                                    <input type="text" id="Skill3" name="Skill3" onkeyup="BuildResume()" placeholder="e.g. Xyz">
+                                    <input type="text" id="Skill4" name="Skill4" onkeyup="BuildResume()" placeholder="e.g. Xyz">
+                                </div>
+                            </form>
+
+                            <button data-repeater-delete type="button" class="repeater-remove-btn">Remove</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-A">
+                <div class="container-B">
+                    <button type="button" data-repeater-create value="Add" class="repeater-add-btn">Add</button>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="achiv-cont">
+            <h3>Achievement</h3>
+            <div class="Ncontainer repeater">
+                <div class="repeater" data-repeater-list="group-a">
+                    <div data-repeater-item>
+                        <div class="container">
+                            <form id="resume-form">
+                                <div class="form-group-about">
+                                    <label for="name">Title</label>
+                                    <input type="text" id="Title" name="Title" class="Title" onkeyup="BuildResume()" placeholder="e.g. abcd">
+                                    <label for="name">Description</label>
+                                    <input type="text" id="Descrp" name="Descrp" onkeyup="BuildResume()" placeholder="e.g. abcd">
+                                </div>
+                            </form>
+
+                            <button data-repeater-delete type="button" class="repeater-remove-btn">Remove</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-A">
+                <div class="container-B">
+                    <button type="button" data-repeater-create value="Add" class="repeater-add-btn">Add</button>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="educ-cont">
+            <h3>Education</h3>
+            <div class="Ncontainer repeater">
+                <div class="repeater" data-repeater-list="group-a">
+                    <div data-repeater-item>
+                        <div class="container">
+                            <form id="resume-form">
+                                <div class="form-group-about">
+                                    <label for="name">School / Coolage</label>
+                                    <input type="text" id="EdSchool" name="EdSchool" onkeyup="BuildResume()" placeholder="e.g. abcd">
+                                    <label for="name">Degree</label>
+                                    <input type="text" id="EdDegree" name="EdDegree" onkeyup="BuildResume()" placeholder="e.g. abcd">
+                                    <label for="name">Location</label>
+                                    <input type="text" id="EdLoc" name="EdLoc" onkeyup="BuildResume()" placeholder="e.g. Xyz-123">
+                                    <label for="name">Start Date</label>
+                                    <input type="date" id="EdSdate" name="EdSdate" onkeyup="BuildResume()">
+                                    <label for="name">End Date</label>
+                                    <input type="date" id="EdEdate" name="EdEdate" onkeyup="BuildResume()">
+                                    <label for="name">Description</label>
+                                    <input type="text" id="EdDescrp" name="EdDescrp" onkeyup="BuildResume()" placeholder="e.g. abcd">
+                                </div>
+                            </form>
+
+                            <button data-repeater-delete type="button" class="repeater-remove-btn">Remove</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-A">
+                <div class="container-B">
+                    <button type="button" data-repeater-create value="Add" class="repeater-add-btn">Add</button>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="Exp-cont">
+            <h3>Experiance</h3>
+            <div class="Ncontainer repeater">
+                <div class="repeater" data-repeater-list="group-a">
+                    <div data-repeater-item>
+                        <div class="container">
+                            <form id="resume-form">
+                                <div class="form-group-about">
+                                    <label for="name">Title</label>
+                                    <input type="text" id="ExTitle" name="ExTitle" onkeyup="BuildResume()" placeholder="e.g. abcd">
+                                    <label for="name">Company</label>
+                                    <input type="text" id="Comp" name="Comp" onkeyup="BuildResume()" placeholder="e.g. abcd">
+                                    <label for="name">Location</label>
+                                    <input type="text" id="Loc" name="Loc" onkeyup="BuildResume()" placeholder="e.g. Xyz-123">
+                                    <label for="name">Start Date</label>
+                                    <input type="date" id="Sdate" name="Sdate" onkeyup="BuildResume()">
+                                    <label for="name">End Date</label>
+                                    <input type="date" id="Edate" name="Edate" onkeyup="BuildResume()">
+                                    <label for="name">Description</label>
+                                    <input type="text" id="EDescrp" name="EDescrp" onkeyup="BuildResume()" placeholder="e.g. abcd">
+                                </div>
+                            </form>
+
+                            <button data-repeater-delete type="button" class="repeater-remove-btn">Remove</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-A">
+                <div class="container-B">
+                    <button type="button" data-repeater-create value="Add" class="repeater-add-btn">Add</button>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-cont">
+            <h3>Project</h3>
+            <div class="Ncontainer repeater">
+                <div class="repeater" data-repeater-list="group-a">
+                    <div data-repeater-item>
+                        <div class="container">
+                            <form id="resume-form">
+                                <div class="form-group-about">
+                                    <label for="name">Project Name</label>
+                                    <input type="text" id="Pname" name="Pname" onkeyup="BuildResume()" placeholder="e.g. abcd">
+                                    <label for="name">Project Link</label>
+                                    <input type="text" id="Plink" name="Plink" onkeyup="BuildResume()" placeholder="e.g. abcd">
+                                    <label for="name">Description</label>
+                                    <input type="text" id="PDescrp" name="PDescrp" onkeyup="BuildResume()" placeholder="e.g. Xyz">
+                                </div>
+                            </form>
+
+                            <button data-repeater-delete type="button" class="repeater-remove-btn">Remove</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-A">
+                <div class="container-B">
+                    <button type="button" data-repeater-create value="Add" class="repeater-add-btn">Add</button>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-A">
+        <div class="container-B">
+            <button type="button" onclick="BuildResume()">Generate CV</button>
+        </div>
+        <div class="container-B">
+            <div  class="print_area">
+             <div id="Display-Resume" class="Display-Resume">
+            </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section class="Download">
+        <div class="container-A">
+        <div class="container-B">
+            <button type="button" class="buttonCV" onclick="DownloadCV()">Download CV</button>
+        </div>
+        </div>
+    </section>
+    <br>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.repeater/1.2.1/jquery.repeater.js" integrity="sha512-bZAXvpVfp1+9AUHQzekEZaXclsgSlAeEnMJ6LfFAvjqYUVZfcuVXeQoN5LhD7Uw0Jy4NCY9q3kbdEXbwhZUmUQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="addsec.js"></script>
+    <script src="template2.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

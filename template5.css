@@ -1,0 +1,53 @@
+.pname{
+   border-bottom-style: dotted;
+   padding: 10px;
+}
+#resumesec1{
+    margin: 1rem 1rem 0;
+    padding: 1rem 1rem 0;
+}
+
+#resumesec2{
+    margin: 0 1rem;
+    padding: 1rem;
+}
+
+h4{
+    font-weight: normal;
+    text-transform: capitalize;
+}
+
+#resumesec2 p{
+    word-wrap: break-word;
+    width: 600px;
+}
+
+.h2bio{
+    font-size: 15px;
+}
+
+#resumesec0{
+    display: flex;
+    gap: 2rem;
+}
+.sec2{
+    width: 280px;
+}
+
+
+@media (max-width:700px){
+    #resumesec2 p{
+        width: 280px;
+    }
+    #resumesec0{
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+@media (max-width:350px){
+    #resumesec2 p{
+        width: 200px;
+    }
+
+}

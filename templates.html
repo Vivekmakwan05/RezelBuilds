@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Templates</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">R <span style="color:#00ced1;">Builds..</span></a>
+        <nav class="navbar">
+            <ul>
+                <li><a><button class="btn" id="logout" name="logout">LogOut</button></a></li>
+                <li> <a href="#" class="profile"><img src="user.png"></a></li>
+            </ul>
+        </nav>
+        <div class="fas fa-bars"></div>
+    </header>
+
+    <section class="templates" id="template">
+
+        <h1 class="heading">Resume <span style="color:#00ced1;">Templates</span></h1>
+
+
+        <div class="box-container">
+
+            <div class="box">
+                <img src="images/template1.png" alt="">
+                <h3>Template : 1</h3>
+                <a href="template1.html"><button class="btn">Choose Template</button></a>
+            </div>
+
+            <div class="box">
+                <img src="images/template2.png" alt="">
+                <h3>Template : 2</h3>
+                <a href="template2.html"><button class="btn">Choose Template</button></a>
+            </div>
+
+            <div class="box">
+                <img src="images/template3.png" alt="">
+                <h3>Template : 3</h3>
+                <a href="template3.html"><button class="btn">Choose Template</button></a>
+            </div>
+
+            <div class="box">
+                <img src="images/template4.png" alt="">
+                <h3>Template : 4</h3>
+                <a href="template4.html"><button class="btn">Choose Template</button></a>
+            </div>
+
+            <div class="box">
+                <img src="images/template5.png" alt="">
+                <h3>Template : 5</h3>
+                <a href="template5.html"><button class="btn">Choose Template</button></a>
+            </div>
+
+            <div class="box">
+                <img src="images/template6.png" alt="">
+                <h3>Template : 6</h3>
+                <a href="template6.html"><button class="btn">Choose Template</button></a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="footer">
+        <h1 class="credit">Develop by <span>@ Rezel Builds..</span> | all rights reserved. </h1>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="main.js"></script>
+    <script src="form.js"></script>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-analytics.js";
+        import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-auth.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyCxuDxtcos6h1D4vERNbYwA6WUEmoDxpKI",
+            authDomain: "rezelbuild.firebaseapp.com",
+            projectId: "rezelbuild",
+            storageBucket: "rezelbuild.appspot.com",
+            messagingSenderId: "237255490385",
+            appId: "1:237255490385:web:fd1644f5610c7687fb3170",
+            measurementId: "G-S9PC5N4CBK"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        const auth = getAuth();
+        console.log(app);
+
+        document.getElementById("logout").addEventListener("click", function () {
+            signOut(auth).then(() => {
+                console.log('Sign-out successful.');
+                alert('Sign-out successful.');
+                document.getElementById('logout').style.display = 'none';
+                window.location = "index.html";
+            }).catch((error) => {
+                console.log('An error happened.');
+            });
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,397 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all .3s cubic-bezier(.38, 1.15, .7, 1.12);
+}
+
+body {
+    margin: 0;
+}
+
+.containerr {
+    max-width: 85%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    margin-bottom: 10px;
+    background: white;
+    padding: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.342);
+    border-bottom-left-radius: 11px;
+    border-bottom-right-radius: 11px;
+}
+
+.container-B {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.about-cont {
+    margin: 3rem;
+    padding: 6rem 0 0 0;
+}
+
+p {
+    font-size: 15px;
+    margin-bottom: 0.5rem;
+    opacity: 0.95;
+    text-align: justify;
+    padding-left: 1rem;
+}
+
+b {
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+h2 {
+    font-size: 1.1rem;
+    font-weight: normal;
+}
+
+h3 {
+    color: #1e2532;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+h4 {
+    color: #1e2532;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.08);
+    padding-bottom: 0.5rem;
+}
+
+#resume-form {
+    padding: 1rem;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label,
+.form-group-about label {
+    display: block;
+    font-weight: 600;
+    font-size: 14px;
+    color: #1e2532;
+    margin-bottom: 0.5rem;
+    margin-top: 10px;
+
+}
+
+.form-group-about input,
+.form-group-about textarea {
+    margin-bottom: 1rem;
+    width: 100%;
+    padding: 0.6rem 1.2rem;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button,
+.buttonCV {
+    display: block;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    color: #1e2532;
+    border: 1px solid #97a0a0;
+    transition: all 300ms ease-in-out;
+}
+
+.buttonCV {
+    background-color: #00ced1;
+    color: #1e2532;
+    border: none;
+}
+
+.buttonCV:hover {
+    background-color: #0bf3f7;
+    color: #1e2532;
+    border-color: #191a1a;
+}
+
+button:hover {
+    background-color: transparent;
+    color: #1e2532;
+    border-color: #656e83;
+}
+
+.btnn {
+    background-color: #00ced1;
+    color: #fff;
+    padding: .3rem 1rem;
+    border-radius: .5rem;
+    font-size: 1.1rem;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+}
+
+.btnn:hover {
+    cursor: pointer;
+    color: #047e81;
+}
+
+.repeater-add-btn {
+    border: none;
+    background-color: #fff;
+    margin-bottom: 1rem;
+}
+
+.repeater-remove-btn {
+    padding: 3px 15px 3px 15px;
+    border: none;
+    border-radius: initial;
+    color: #fff;
+    background-color: #ca0b00;
+}
+
+
+.Display-Resume {
+    max-width: 700px;
+    margin: auto;
+    margin-top: 20px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.342);
+    margin-bottom: 20px;
+}
+
+.resume {
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.resume p {
+    word-wrap: break-word;
+    width: 600px;
+}
+
+.profile {
+    text-align: center;
+}
+
+.h2bio {
+    font-size: 15px;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: #fff;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+}
+
+
+header.sticky {
+    background: #fff;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+}
+
+.navbar {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 3px 8px;
+}
+
+
+.navbar .containerr {
+    width: 100%;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 2.5rem;
+}
+
+.navbar-brand-text {
+    color: #1e2532;
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+
+.navbar-brand-text span {
+    color: #00ced1;
+}
+
+.navbar-brand-icon {
+    width: 25px;
+    margin-right: 6px;
+    opacity: 0.8;
+}
+
+.brand-and-toggler {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pimg {
+    text-align: left;
+}
+
+.pname{
+    text-align: center;
+}
+
+img {
+    max-width: 150px;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+.Download {
+    margin: 2rem 0 6rem 0;
+}
+
+.profile{
+    text-align: left;
+}
+
+#resumesec22 {
+    display: flex;
+    gap: 3rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.207);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.207);
+}
+
+#resumesec223 {
+    display: flex;
+    gap: 3rem;
+    margin-top: 1rem;
+}
+
+.sec2 {
+    padding-bottom: 1rem;
+    text-align: left;
+}
+
+.sec2 p{
+    width: 260px;
+    word-wrap: break-word;
+}
+
+.sec22 p{
+    width: 260px;
+    word-wrap: break-word;
+}
+
+.sec223 p{
+    width: 260px;
+    word-wrap: break-word;
+}
+
+.sec22 {
+    padding: 0 1rem 0 1rem;
+    text-align: left;
+    border-left: 1px solid rgba(0, 0, 0, 0.207);
+}
+
+.sec223 {
+    padding: 0 1rem 0 1rem;
+    text-align: left;
+}
+
+
+@media (max-width:1080px) {
+    .container {
+        margin: 1rem;
+    }
+
+    .about-cont {
+        margin: 3rem 0 0 0;
+    }
+
+    .container-A {
+        margin: 1rem;
+    }
+}
+
+@media (max-width:600px){
+    .resume p{
+        width: 400px;
+    }
+    #resumesec22, #resumesec223  {
+        padding: 1rem 0 0 0;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        border: none;
+    }
+    .sec22, .sec223{
+        border: none;
+    }
+
+}
+
+@media (max-width:470px){
+    .resume p{
+        width: 200px;
+    }
+
+}
+
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+
+    .non_print_area {
+        display: none;
+    }
+
+    .print_area,
+    .print_area * {
+        visibility: visible;
+    }
+
+    .print_area {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        overflow: hidden;
+    }
+
+}
