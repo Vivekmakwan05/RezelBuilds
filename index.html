@@ -31,7 +31,7 @@
             <img src="./user.png" class="user">
             <input type="text" id="email" name="email" placeholder="Enter Email">
             <input type="password" id="password" name="password" placeholder="Enter Password"><br>
-            <button type="button" class="btn" id="signup" name="signup">Sign-Up</button>
+            <button type="button" class="btn" id="signup" onclick="forSignUp()">Sign-Up</button>
         </div>
     </form>
     <form class="popup2" id="main">
@@ -40,7 +40,7 @@
             <img src="./user.png" class="user">
             <input type="text" name="log_email" id="log_email" placeholder="Enter Email">
             <input type="password" name="log_password" id="log_password" placeholder="Enter Password"><br>
-            <button type="button" class="btn" id="login" name="login">login</button>
+            <button type="button" class="btn" id="login" onclick="forLogin()" >login</button>
         </div>
     </form>
 
@@ -167,87 +167,19 @@
     <script src="js/main.js"></script>
     <script src="js/form.js"></script>
 
-    <script type="module">
-
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js";
-        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-analytics.js";
-        import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-auth.js";
-
-        const firebaseConfig = {
-            apiKey: "AIzaSyCxuDxtcos6h1D4vERNbYwA6WUEmoDxpKI",
-            authDomain: "rezelbuild.firebaseapp.com",
-            projectId: "rezelbuild",
-            storageBucket: "rezelbuild.appspot.com",
-            messagingSenderId: "237255490385",
-            appId: "1:237255490385:web:fd1644f5610c7687fb3170",
-            measurementId: "G-S9PC5N4CBK"
-        };
-
-        const app = initializeApp(firebaseConfig);
-        const analytics = getAnalytics(app);
-        const auth = getAuth();
-        console.log(app);
- 
-        document.getElementById("signup").addEventListener("click", function () {
-            var email = document.getElementById("email").value;
-            var password = document.getElementById("password").value;
-    
-            createUserWithEmailAndPassword(auth, email, password)
-                .then((userCredential) => {
-                    const user = userCredential.user;
-                    console.log(user);
-                    alert("Registration successfully!!");
-                })
-                .catch((error) => {
-                    const errorCode = error.code;
-                    const errorMessage = error.message;
-                    // ..
-                    console.log(errorMessage);
-                    alert(error);
-                });
-        });
-  
-        document.getElementById("login").addEventListener("click", function () {
-            var email = document.getElementById("log_email").value;
-            var password = document.getElementById("log_password").value;
-
-            signInWithEmailAndPassword(auth, email, password)
-                .then((userCredential) => {
-                    const user = userCredential.user;
-                    console.log(user);
-                    alert(user.email + " Login successfully!!!");
-                    window.location = "login.html";
-                })
-                .catch((error) => {
-                    const errorCode = error.code;
-                    const errorMessage = error.message;
-                    console.log(errorMessage);
-                    alert(errorMessage);
-                });
-        });
-  
-        document.getElementById("logout").addEventListener("click", function () {
-            signOut(auth).then(() => {
-                console.log('Sign-out successful.');
-                alert('Sign-out successful.');
-                document.getElementById('logout').style.display = 'none';
-            }).catch((error) => {
-                console.log('An error happened.');
-            });
-        });
-
-    </script>
-
     <script>
         function alertforLogin() {
             alert("Please First Sign-UP/Login");
         }
-        var typed = new Typed(".input", {
-        strings: ["Easy And Fast Resume", "Proffessional Resume", "With The Help Of Resume"],
-        typedSpeed: 70,
-        backSpeed: 55,
-        loop: true
-    });
+
+        function forSignUp() {
+            alert("SignUp Successfully..");
+        }
+
+        function forLogin() {
+            window.location.href = "login.html";
+            alert("Login Successfully..");
+        }
     </script>
 
 </body>
